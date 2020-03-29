@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/fitness/fitness",
+    "pages/data/data",
+    "pages/my/my",
+    "pages/check-in/check-in",
+    "pages/calorie/calorie",
+    "pages/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "健身日记",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f8fa"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/fitness/fitness",
+        "text": "健身",
+        "iconPath": "images/fitness.png",
+        "selectedIconPath": "images/fitness.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "数据",
+        "iconPath": "images/data.png",
+        "selectedIconPath": "images/data.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "dist/button/index",
+    "van-icon": "dist/icon/index",
+    "van-panel": "dist/panel/index",
+    "van-cell": "dist/cell/index",
+    "van-cell-group": "dist/cell-group/index",
+    "van-search": "dist/search/index",
+    "van-grid": "dist/grid/index",
+    "van-grid-item": "dist/grid-item/index",
+    "van-submit-bar": "dist/submit-bar/index",
+    "van-popup": "dist/popup/index",
+    "van-field": "dist/field/index",
+    "van-overlay": "dist/overlay/index",
+    "van-sidebar": "dist/sidebar/index",
+    "van-sidebar-item": "dist/sidebar-item/index",
+    "van-divider": "dist/divider/index",
+    "van-dropdown-menu": "dist/dropdown-menu/index",
+    "van-dropdown-item": "dist/dropdown-item/index",
+    "van-loading": "dist/loading/index",
+    "van-toast": "dist/toast/index",
+    "van-dialog": "dist/dialog/index",
+    "van-swipe-cell": "dist/swipe-cell/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

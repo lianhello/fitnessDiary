@@ -1,0 +1,3 @@
+<!--pages/article/article.wxml-->
+<wemark md="{{article}}" link highlight type="wemark"></wemark>
+<van-loading wx:if="{{loading}}" size="50px" vertical>加载中...</van-loading>

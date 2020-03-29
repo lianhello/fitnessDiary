@@ -1,0 +1,6 @@
+<!--pages/fitness/fitness.wxml-->
+<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+  <van-sidebar-item title="开始" />
+  <van-sidebar-item title="身高体重" />
+  <van-sidebar-item title="标签名称" />
+</van-sidebar>

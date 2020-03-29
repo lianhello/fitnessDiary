@@ -1,0 +1,45 @@
+<!--pages/calorie/calorie.wxml-->
+<van-search value="{{ search }}" placeholder="请输入搜索关键词" use-action-slot bind:search="onSearch" bind:change="onChange" bind:clear="onClear">
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<van-dropdown-menu active-color="#ee0a24">
+  <van-dropdown-item value="{{ typeValue }}" options="{{ typeOption }}" bind:change="onSwitchType" />
+</van-dropdown-menu>
+
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<van-loading wx:if="{{loading}}" size="50px" vertical>加载中...</van-loading>
+
+<view>
+  <block wx:for="{{calorieData}}" wx:key="id">
+    <van-cell title="{{item.name}}" value="{{item.calorie}}卡/{{item.gram}}克" data-id="{{item.id}}" data-name="{{item.name}}" data-calorie="{{item.calorie}}" data-gram="{{item.gram}}" clickable="true" bind:click="shopShow" />
+  </block>
+</view>
+
+<van-popup show="{{ show }}" bind:close="shopClose" class="caloriePopup">
+  <text class="calorieName">{{calorieName}}\n</text>
+  <text class="gram">{{calorie}}卡/{{gram}}克\n</text>
+  <van-cell-group>
+    <van-field type="number" label="摄食" placeholder="克" input-align="right" bind:input="input" value="{{fieldGram}}" size="large" />
+    <van-button icon="plus" color="#ee0a24" type="primary" bind:tap="add"></van-button>
+  </van-cell-group>
+</van-popup>
+
+<van-popup show="{{ orderShow }}" position="bottom" custom-style="height: 60%; margin-bottom:50px" bind:close="orderClose">
+  <view class="clearItem" bindtap="orderClear">
+    <van-icon name="../../images/rubbish.png" size="25px" class="rubbishIcon" />
+    <view class="clearText">清空</view>
+  </view>
+  <block wx:for="{{orderItem}}" wx:key="id">
+    <van-swipe-cell right-width="{{ 65 }}">
+      <van-cell center title="{{item.name}}" label="{{item.calorie}}卡/{{item.gram}}克" value="{{item.value}}卡" clickable="true" />
+      <view slot="right" class="rightSlot" data-id="{{index}}" bindtap="orderItemDelete">删除</view>
+    </van-swipe-cell>
+  </block>
+</van-popup>
+
+
+<van-submit-bar price="{{price}}" currency="" suffix-label="卡" disabled="{{disabled}}" decimal-length="0" button-text="提交" bind:submit="orderSubmit">
+  <van-icon name="cart-o" size="30px" custom-style="margin-left:10px;padding-right:10px;border-right-style: solid" bind:click="orderShow" />
+</van-submit-bar>

@@ -1,0 +1,56 @@
+/* pages/index/index.wxss */
+.top {
+  text-align: center;
+  padding: 40rpx 0;
+  margin: 40rpx 20rpx;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.van-button--primary {
+  width: 300rpx;
+  margin: 0rpx 20rpx;
+}
+.cell {
+  display: flex;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-weight: bold;
+}
+.article {
+  padding: 40rpx 40rpx 0 40rpx;
+  margin: 40rpx 20rpx;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.article text {
+  font-weight: bold;
+}
+.articleCell {
+  display: flex;
+  box-sizing: border-box;
+  line-height: 24px;
+  margin-top: 40rpx;
+}
+.articleName {
+  /* padding: 40rpx 40rpx; */
+  /* margin-top: 40rpx; */
+  /* background-color: #fff; */
+  /* border-radius: 5px; */
+  font-size: 18px;
+  line-height: 20px;
+  flex: 1;
+  display: block;
+
+}
+.articleIcon {
+  line-height: 24px;
+  position: relative;
+  justify-content: center;
+  display: inline-block;
+font-size: inherit;
+
+
+}

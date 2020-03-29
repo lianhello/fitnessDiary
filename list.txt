@@ -1,0 +1,35 @@
+
+├─pom.xml 					maven配置文件
+│      
+├─src
+│  ├─main
+│  │  ├─java
+│  │  │  └─com
+│  │  │      └─by
+│  │  │          │  Application.java 			主程序入口
+│  │  │          │  
+│  │  │          ├─config				配置类
+│  │  │          │      
+│  │  │          ├─controller				controller层
+│  │  │          │      
+│  │  │          ├─entity				实体类
+│  │  │          │      
+│  │  │          ├─mapper				dao层
+│  │  │          │      
+│  │  │          ├─service				service层
+│  │  │          │  │  
+│  │  │          │  └─impl				实现类
+│  │  │          │          
+│  │  │          └─util					工具类
+│  │  │                      
+│  │  └─resources
+│  │          application.properties			配置文件
+│  │          
+│  └─test
+│      ├─java
+│      │  └─com
+│      │      └─test					测试类
+│      │              
+│      └─resources
+
+                    

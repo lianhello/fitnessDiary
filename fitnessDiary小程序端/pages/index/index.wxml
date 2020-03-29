@@ -1,0 +1,23 @@
+<!--pages/index/index.wxml-->
+<view class="top">
+  <van-button type="primary" icon="../../images/jsq.png" bindtap="calorie">卡路里计算</van-button>
+  <van-button type="primary" icon="records">健身计划</van-button>
+</view>
+
+<view class="content">
+  <view class="article">
+    <!-- <van-icon name="../../images/article.png" /> -->
+    <view class="cell">
+      <van-icon name="orders-o" class="articleIcon" />
+      <view class="articleName">最新文章</view>
+    </view>
+    <van-divider />
+    <block wx:for="{{article}}" wx:key="name">
+      <view bindtap="articleMain" id="{{item.id}}" class="articleCell">
+        <view class="articleName">{{item.name}}</view>
+        <van-icon name="arrow" class="articleIcon" />
+      </view>
+      <van-divider hairline />
+    </block>
+  </view>
+</view>

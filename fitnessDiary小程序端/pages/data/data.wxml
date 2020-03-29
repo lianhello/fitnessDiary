@@ -1,0 +1,9 @@
+<!--pages/data/data.wxml-->
+
+<!-- <van-dropdown-menu>
+  <van-dropdown-item value="{{ typeValue }}" options="{{ typeOption }}" />
+</van-dropdown-menu> -->
+
+<view class="container1">
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+</view>

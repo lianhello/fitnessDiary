@@ -32,7 +32,7 @@
 ### 服务端
 
 ```txt
-├─pom.xml 								maven配置文件
+├─pom.xml 								        maven配置文件
 │      
 ├─src
 │  ├─main
@@ -41,19 +41,19 @@
 │  │  │      └─by
 │  │  │          │  Application.java 	主程序入口
 │  │  │          │  
-│  │  │          ├─config				配置类
+│  │  │          ├─config				  配置类
 │  │  │          │      
 │  │  │          ├─controller			controller层
 │  │  │          │      
-│  │  │          ├─entity				实体类
+│  │  │          ├─entity				  实体类
 │  │  │          │      
-│  │  │          ├─mapper				dao层
+│  │  │          ├─mapper				  dao层
 │  │  │          │      
 │  │  │          ├─service				service层
 │  │  │          │  │  
 │  │  │          │  └─impl				实现类
 │  │  │          │          
-│  │  │          └─util					工具类
+│  │  │          └─util					  工具类
 │  │  │                      
 │  │  └─resources
 │  │          application.properties	配置文件

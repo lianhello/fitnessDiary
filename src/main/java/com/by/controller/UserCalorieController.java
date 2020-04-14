@@ -28,4 +28,11 @@ public class UserCalorieController {
 		JSONArray uCJsonArray = j.getJSONArray("userCalorie");
 		return userCalorieService.addUserCalorie(uCJsonArray, httpServletRequest);
 	}
+	
+	@RequestMapping(value = "/showUserCalorie", method = RequestMethod.GET)
+	@ResponseBody
+	@Authorize
+	public JSONArray showUserCalorie(HttpServletRequest httpServletRequest) {
+		return userCalorieService.showUserCalorie(httpServletRequest);
+	}
 }

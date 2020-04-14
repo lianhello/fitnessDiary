@@ -11,11 +11,14 @@ import com.by.entity.Calorie;
 public interface CalorieMapper {
 	
 	@Select("select * from calorie")
-	public List<Calorie> ListAll();
+	public List<Calorie> listAll();
+	
+	@Select("select * from calorie where id = #{id}")
+	public Calorie getById(int id);
 	
 	@Select("select * from calorie where type = #{type}")
-	public List<Calorie> ListByType(int type);
+	public List<Calorie> listByType(int type);
 	
 	@Select("select * from calorie where name like '%${value}%'")
-	public List<Calorie> ListSearch(String search);
+	public List<Calorie> listSearch(String search);
 }

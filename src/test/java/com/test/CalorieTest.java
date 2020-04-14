@@ -10,11 +10,9 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.by.Application;
-import com.by.config.PageHelperConfig;
 import com.by.entity.Calorie;
 import com.by.mapper.CalorieMapper;
 import com.by.service.CalorieService;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -32,7 +30,7 @@ public class CalorieTest {
 	@Test
 	public void test() {
 		PageHelper.startPage(1,10);
-		List<Calorie> list = calorieMapper.ListAll();
+		List<Calorie> list = calorieMapper.listAll();
 		
         PageInfo<Calorie> pageInfo = new PageInfo<>(list);
 //		return pageInfo;

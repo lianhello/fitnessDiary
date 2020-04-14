@@ -25,7 +25,7 @@ public class CalorieServiceImpl implements CalorieService {
 
 	@Cacheable("calorieTypeItem")
 	public JSONArray calorieTypeItem(int type) {
-		List<Calorie> cL = calorieMapper.ListByType(type);
+		List<Calorie> cL = calorieMapper.listByType(type);
 		JSONArray calorieArray = new JSONArray();
 		for (Calorie c : cL) {
 			JSONObject calorieJson = new JSONObject();
@@ -40,7 +40,7 @@ public class CalorieServiceImpl implements CalorieService {
 
 	// @Cacheable("calorieSearch")
 	public JSONArray calorieSearch(String search) {
-		List<Calorie> calorieList = calorieMapper.ListSearch(search);
+		List<Calorie> calorieList = calorieMapper.listSearch(search);
 		JSONArray calorieArray = new JSONArray();
 		for (Calorie c : calorieList) {
 			JSONObject calorieJson = new JSONObject();
@@ -57,7 +57,7 @@ public class CalorieServiceImpl implements CalorieService {
 	public JSONArray ListAll() {
 		JSONArray calorieArray = new JSONArray();
 		JSONArray array = new JSONArray();
-		List<Calorie> calorieList = calorieMapper.ListAll();
+		List<Calorie> calorieList = calorieMapper.listAll();
 		String type = "";
 		for (Calorie c : calorieList) {
 			if (c.getType() != type) {
@@ -88,7 +88,7 @@ public class CalorieServiceImpl implements CalorieService {
 		List<CalorieType> calorieTypeList = calorieTypeMapper.ListAll();
 
 		for (CalorieType cT : calorieTypeList) {
-			List<Calorie> calorieList = calorieMapper.ListByType(cT.getId());
+			List<Calorie> calorieList = calorieMapper.listByType(cT.getId());
 
 			JSONArray calorieArray = new JSONArray();
 
@@ -114,7 +114,7 @@ public class CalorieServiceImpl implements CalorieService {
 		Integer pageSize = 50;
 
 		PageHelper.startPage(pageNum, pageSize);
-		List<Calorie> calorieList = calorieMapper.ListAll();
+		List<Calorie> calorieList = calorieMapper.listAll();
 		PageInfo<Calorie> pageInfo = new PageInfo<>(calorieList);
 		return pageInfo;
 	}

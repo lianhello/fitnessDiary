@@ -7,4 +7,5 @@ import com.alibaba.fastjson.JSONObject;
 
 public interface UserCalorieService {
 	JSONObject addUserCalorie(JSONArray userCalorie, HttpServletRequest httpServletRequest);
+	JSONArray showUserCalorie(HttpServletRequest httpServletRequest);
 }
